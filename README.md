@@ -41,5 +41,5 @@ endmodule
 ### Read the first instruction when the first clock posedge after reset is zero.
 ### Read the second instruction when the second clock posedge after reset is zero...
 
-![Screenshot 2023-02-06 220638](https://user-images.githubusercontent.com/68816726/216992546-15e8bf68-a821-45ef-8255-f931ba008b13.png)
+![Screenshot 2023-02-06 221529](https://user-images.githubusercontent.com/68816726/216994797-1e047b78-affb-4f0f-85a8-a6318cf0b0a9.png)
 
