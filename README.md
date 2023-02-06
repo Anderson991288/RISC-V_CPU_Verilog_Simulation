@@ -2,7 +2,7 @@
 
 ### Convert to machine code by assembler
 
-### assembly.asm to machinecode
+(assembly.asm to machinecode)
 
 ![Screenshot 2023-02-06 214127](https://user-images.githubusercontent.com/68816726/216986967-2e03f3f7-9afd-4786-8c0e-f4503aa314f8.png)
 
