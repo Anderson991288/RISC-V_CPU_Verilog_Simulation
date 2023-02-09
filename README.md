@@ -1,13 +1,12 @@
 # RISC-V_CPU_Verilog_Simulation
 
-### Convert to machine code by assembler
+### 1.Convert to machine code by assembler
 
 (assembly.asm to machinecode)
 
 ![Screenshot 2023-02-06 214127](https://user-images.githubusercontent.com/68816726/216986967-2e03f3f7-9afd-4786-8c0e-f4503aa314f8.png)
 
-### Put the converted machine code under the same path as the vivado project
-### Read the machine code by inst_mem 
+### 2.Put the converted machine code under the same path as the vivado project.Read the machine code by inst_mem 
 
 ![Screenshot 2023-02-06 215445](https://user-images.githubusercontent.com/68816726/216989718-2b792495-fcc6-43a2-8de6-9b42676c33a4.png)
 
@@ -36,7 +35,7 @@ end
 endmodule
 ```
 
-### waveform
+### 3.waveform
 
 ### Read the first instruction when the first clock posedge after reset is zero.
 ### Read the second instruction when the second clock posedge after reset is zero...
