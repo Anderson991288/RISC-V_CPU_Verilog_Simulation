@@ -35,7 +35,7 @@ end
 endmodule
 ```
 
-### 3.waveform
+### 3.waveform : 
 
 ### Read the first instruction when the first clock posedge after reset is zero.
 ### Read the second instruction when the second clock posedge after reset is zero...
