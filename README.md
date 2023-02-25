@@ -7,7 +7,13 @@ Implementing a simple RISC-V processor in Verilog.
 * Use vivado to view waveform 
 * Run the test codes
 
-if.v (single cycle) :
+## RV32I Base Instruction Set: 
+
+![RV32I Base Instruction Set](https://user-images.githubusercontent.com/68816726/221367757-ee89f98c-b9be-4689-9452-a6259137e76d.png)
+
+
+
+### if.v (single cycle) :
 
 ![未命名绘图](https://user-images.githubusercontent.com/68816726/221366863-2b04d18a-567b-40a4-88bc-509f29fb84f8.jpg)
 
@@ -21,6 +27,14 @@ Program Counter : 用於控制計數器。
 第二個always block根據ce訊號和Branch訊號來控制PC訊號。如果ce訊號為0，表示需要重置程序計數器，PC訊號為0。如果Branch訊號為1，表示需要跳轉到指定地址，PC訊號為目標地址Addr。否則，PC訊號等於上一個周期的PC訊號加4。
 
 因為每個指令的大小都是4 bit，所以程式計數器需要加4才能指向下一個指令的地址。
+
+### id.v (single cycle) :
+
+* Decode the instruction, get ALUop by opcode, funct3 and funct7
+* Determine whether the registers need to be read, and send the register numbers rs1, rs2 to the register file, and read the corresponding data as the source operands.
+* Sign extension (or unsigned extension) for instructions containing immediate values as one of the source operands
+
+
 
 
 
