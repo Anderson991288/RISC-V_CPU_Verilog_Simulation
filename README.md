@@ -11,7 +11,7 @@ Implementing a simple RISC-V processor in Verilog.
 
 ![RV32I Base Instruction Set](https://user-images.githubusercontent.com/68816726/221367757-ee89f98c-b9be-4689-9452-a6259137e76d.png)
 
-
+*The last 7 bit are opcode.
 
 ### if.v (single cycle) :
 
