@@ -11,22 +11,36 @@ Implementing a simple RISC-V processor in Verilog.
 
 
 
-## RV32I Base Instruction Set: 
+## RISC V RV32I Base Instruction Set :
 
+### R-FORMAT		
 | Instruction  | Funct3 | Funct6/7 | Opcode | 
 | :--------:| :----:  | :------: | :------:|
 |    add    |   000   | 0000000  | 0110011 |
-|    addi   |  000    |   N/A    | 0010011 |
 |    and    |   111   | 0000000  | 0110011 |
 |    or     |   110   | 0000000  | 0110011 |
 |    xor    |   100   | 0000000  | 0110011 |
-|    lw     |   010   |   N/A    | 0000011 |
-|    sw     |  010    |   N/A    | 0100011 | 
-|    blt    |  100    |   N/A    | 1100111 |
-|    beq    |   000   |   N/A    | 1100111 |
-|    jal    |  N/A    |   N/A    | 1101111 |
 |    sll    |  001    | 0000000  | 0110011 |
 |    srl    | 101     | 0000000  | 0110011 | 
+
+### I -FORMAT
+| Instruction  | Funct3 | Funct6/7 | Opcode | 
+| :--------:| :----:  | :------: | :------:|
+|    addi   |  000    |   N/A    | 0010011 |
+|    lw     |   010   |   N/A    | 0000011 |
+|    sw     |  010    |   N/A    | 0100011 | 
+
+### B-FORMAT
+| Instruction  | Funct3 | Funct6/7 | Opcode | 
+| :--------:| :----:  | :------: | :------:|
+|    blt    |  100    |   N/A    | 1100111 |
+|    beq    |   000   |   N/A    | 1100111 |
+
+### J-FORMAT
+| Instruction  | Funct3 | Funct6/7 | Opcode | 
+| :--------:| :----:  | :------: | :------:|
+|    jal    |  N/A    |   N/A    | 1101111 |
+
 
 ## Explain :
 
