@@ -72,14 +72,16 @@ endmodule
 
 ### id.v (single cycle) :
 
-* Decode the instruction, get ALUop by opcode, funct3 and funct7
-* Determine whether the registers need to be read, and send the register numbers rs1, rs2 to the register file, and read the corresponding data as the source operands.
-* Sign extension (or unsigned extension) for instructions containing immediate values as one of the source operands
+* 將輸入的指令進行解碼，產生相應的控制訊號和輸出數據
 
 
-
-
-
+| Instruction | opcode  | funct3 | funct7  | ALUop  |
+| :---------: | :-----: | :----: | :-----: | :----: |
+|     add     | 0110011 |  000   | 0000000 | 01101  |
+|     sub     | 0110011 |  000   | 0100000 | 01110  |
+|     sw      | 0100011 |  001   | N/A     | 10101  |
+|     lw      | 0000011 |  010   |   N/A   | 10100  |
+|     addi    | 0010011 |  000   | N/A     | 01100  |
 
 
 
