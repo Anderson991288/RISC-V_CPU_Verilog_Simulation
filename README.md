@@ -33,7 +33,8 @@ Implementing a simple RISC-V processor in Verilog.
 * 第二個always block根據ce訊號和Branch訊號來控制PC訊號。如果ce訊號為0，表示需要重置程序計數器，PC訊號為0。如果Branch訊號為1，表示需要跳轉到指定地址，PC訊號為目標地址Addr。否則，PC訊號等於上一個周期的PC訊號加4
 
 * 因為每個指令的大小都是4 bit，所以程式計數器需要加4才能指向下一個指令的地址
-* 
+
+
 ![未命名绘图](https://user-images.githubusercontent.com/68816726/221366863-2b04d18a-567b-40a4-88bc-509f29fb84f8.jpg)
 ```
 module PC(
