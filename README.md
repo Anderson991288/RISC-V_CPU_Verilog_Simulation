@@ -49,13 +49,11 @@ endmodule
 
 Program Counter : 用於控制計數器。
 
-在這個模塊中，總共有兩個always block。
+* 第一個always block根據重置訊號rst來控制ce訊號，重置訊號為1時，ce訊號為0，否則為1。
 
-第一個always block根據重置訊號rst來控制ce訊號，重置訊號為1時，ce訊號為0，否則為1。
+* 第二個always block根據ce訊號和Branch訊號來控制PC訊號。如果ce訊號為0，表示需要重置程序計數器，PC訊號為0。如果Branch訊號為1，表示需要跳轉到指定地址，PC訊號為目標地址Addr。否則，PC訊號等於上一個周期的PC訊號加4。
 
-第二個always block根據ce訊號和Branch訊號來控制PC訊號。如果ce訊號為0，表示需要重置程序計數器，PC訊號為0。如果Branch訊號為1，表示需要跳轉到指定地址，PC訊號為目標地址Addr。否則，PC訊號等於上一個周期的PC訊號加4。
-
-因為每個指令的大小都是4 bit，所以程式計數器需要加4才能指向下一個指令的地址。
+* 因為每個指令的大小都是4 bit，所以程式計數器需要加4才能指向下一個指令的地址。
 
 ### id.v (single cycle) :
 
