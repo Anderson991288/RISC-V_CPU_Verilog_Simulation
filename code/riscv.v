@@ -1,26 +1,3 @@
-/*
- * Ask me anything: via repo/issue, or e-mail: vencifreeman16@sjtu.edu.cn.
- * Author: @VenciFreeman (GitHub), copyright 2019.
- * School: Shanghai Jiao Tong University.
- 
- * Description:
- * This file controls the CPU.
- 
- * Details:
- * There is no details.
- 
- * History:
- * - 19/12/19: Create this file;
- * - 19/12/23: Add own modules;
- * - 19/12/24: Add own modules;
- * - 19/12/26: Update modules;
- * - 19/12/27: Update modules;
- * - 19/12/28: Finished!
- 
- * Notes:
- 
- */
-
 module riscv(
 
 	input wire				 clk,
