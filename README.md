@@ -16,7 +16,36 @@ Implementing a simple RISC-V processor in Verilog.
 ### if.v (single cycle) :
 
 ![未命名绘图](https://user-images.githubusercontent.com/68816726/221366863-2b04d18a-567b-40a4-88bc-509f29fb84f8.jpg)
+```
+module PC(
 
+	input	wire 		clk,
+	input	wire		rst,
+	input 	wire		Branch,  // if branch or not
+	input 	wire[31:0] 	Addr,	 // target address
+	output 	reg 	 	ce,
+	output	reg [31:0] 	PC
+
+);
+
+always @ (posedge clk) begin
+	if (rst)
+		ce <= 1'b0;
+	else
+		ce <= 1'b1;
+end
+
+always @ (posedge clk) begin
+	if (!ce)
+		PC <= 32'b0;
+	else if (Branch)
+		PC <= Addr;
+	else
+		PC <= PC + 4'h4;  // New PC equals ((old PC) + 4) per cycle.
+end
+
+endmodule
+```
 
 Program Counter : 用於控制計數器。
 
