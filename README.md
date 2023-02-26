@@ -23,6 +23,9 @@ Implementing a simple RISC-V processor in Verilog.
 |    sll    |  001    | 0000000  | 0110011 |
 |    srl    | 101     | 0000000  | 0110011 | 
 
+![未命名绘图 drawio (5)](https://user-images.githubusercontent.com/68816726/221401673-bda006c1-01af-4243-93c6-89c23b176947.png)
+
+
 ### I -FORMAT
 | Instruction  | Funct3 | Funct6/7 | Opcode | 
 | :--------:| :----:  | :------: | :------:|
@@ -40,6 +43,10 @@ Implementing a simple RISC-V processor in Verilog.
 | Instruction  | Funct3 | Funct6/7 | Opcode | 
 | :--------:| :----:  | :------: | :------:|
 |    jal    |  N/A    |   N/A    | 1101111 |
+
+
+
+
 
 
 ## Explain :
