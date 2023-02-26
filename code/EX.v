@@ -1,29 +1,3 @@
-/*
- * Ask me anything: via repo/issue, or e-mail: vencifreeman16@sjtu.edu.cn.
- * Author: @VenciFreeman (GitHub), copyright 2019.
- * School: Shanghai Jiao Tong University.
-
- * Description:
- * Do some operations according to ALUop and the 2 source oprands.
-
- * Details:
- * - Use the ALUop and the two source operands decoded in id.v to perform the
- *   cordponding operation;
- * - If ALUop indicates that it's an addition operation, the two operands will be
- *	 added;
- * - The sub operation can be implemented by complement, etc.
-
- * History:
- * - 19/12/05: Create this file;
- * - 19/12/19¡GEdit the ALU module and the RISC-V instructions;
- * - 19/12/23: Modify the format and logic;
- * - 19/12/26: Edit the module;
- * - 19/12/27: Fix some errors;
- * - 19/12/28: Finished!
-
- * Notes:
- */
-
 module EX(
 
 	input	wire	    rst,
