@@ -1,12 +1,3 @@
-/*
- * Ask me anything: via repo/issue, or e-mail: vencifreeman16@sjtu.edu.cn.
- * Author: @VenciFreeman (GitHub), copyright 2019.
- * School: Shanghai Jiao Tong University.
-
- ****************** Original test module. Do not Modify! ******************
- 
- */
-
 module inst_mem(
 
 	input	wire		ce,    // chip select signal
