@@ -68,7 +68,7 @@ endmodule
 
 ### id.v (single cycle) :
 
-* 將前面所得的指令進行decode，根據opcode, funct3, funct7決定ALUop
+* 將前面所得的指令decode，根據opcode, funct3, funct7決定ALUop
 
 | Instruction | opcode  | funct3 | funct7  | ALUop  |
 | :---------: | :-----: | :----: | :-----: | :----: |
