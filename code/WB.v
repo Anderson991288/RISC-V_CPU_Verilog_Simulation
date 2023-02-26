@@ -1,21 +1,3 @@
-/*
- * Ask me anything: via repo/issue, or e-mail: vencifreeman16@sjtu.edu.cn.
- * Author: @VenciFreeman (GitHub), copyright 2019.
- * School: Shanghai Jiao Tong University.
-
- * Description:
- * This file controls the data writing of the mem module back to registers.
-
- * Details:
- * No Details.
-
- * History:
- * - 19/12/27: Create this file, add PC module;
- * - 19/12/28: Finished!
-
- * Notes:
- */
-
 module WB (
 
     input   wire        rst,
