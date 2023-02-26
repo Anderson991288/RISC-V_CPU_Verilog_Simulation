@@ -24,10 +24,6 @@ Implementing a simple RISC-V processor in Verilog.
 |    sll    |  001    | 0000000  | 0110011 |
 |    srl    | 101     | 0000000  | 0110011 | 
 
-
-
-* The last 7 bit are opcode.
-
 ### if.v (single cycle) :
 
 ![未命名绘图](https://user-images.githubusercontent.com/68816726/221366863-2b04d18a-567b-40a4-88bc-509f29fb84f8.jpg)
