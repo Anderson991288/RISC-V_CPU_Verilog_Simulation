@@ -9,9 +9,24 @@ Implementing a simple RISC-V processor in Verilog.
 
 ## RV32I Base Instruction Set: 
 
-![RV32I Base Instruction Set](https://user-images.githubusercontent.com/68816726/221367757-ee89f98c-b9be-4689-9452-a6259137e76d.png)
+| Instruction  | Funct3 | Funct6/7 | Opcode | 
+| :--------:| :----:  | :------: | :------:|
+|    add    |   000   | 0000000  | 0110011 |
+|    addi   |  000    |   N/A    | 0010011 |
+|    and    |   111   | 0000000  | 0110011 |
+|    or     |   110   | 0000000  | 0110011 |
+|    xor    |   100   | 0000000  | 0110011 |
+|    lw     |   010   |   N/A    | 0000011 |
+|    sw     |  010    |   N/A    | 0100011 | 
+|    blt    |  100    |   N/A    | 1100111 |
+|    beq    |   000   |   N/A    | 1100111 |
+|    jal    |  N/A    |   N/A    | 1101111 |
+|    sll    |  001    | 0000000  | 0110011 |
+|    srl    | 101     | 0000000  | 0110011 | 
 
-*The last 7 bit are opcode.
+
+
+* The last 7 bit are opcode.
 
 ### if.v (single cycle) :
 
@@ -47,7 +62,7 @@ end
 endmodule
 ```
 
-Program Counter : 用於控制計數器。
+* Program Counter : 用於控制計數器。
 
 * 第一個always block根據重置訊號rst來控制ce訊號，重置訊號為1時，ce訊號為0，否則為1。
 
