@@ -124,6 +124,31 @@ end
 | 00101 |     or     |
 
 
+### mem.v :
+
+* 實現存取記憶體的操作
+* 根據ALUop_i的值，對記憶體讀取或寫入
+* 如果指令是lw, 從 data_mem read data
+* 如果指令是sw, 從 data_mem write data
+* 如果 ALUop_i 等於 5'b10101（表示 sw），mem_we 為 1 啟動write data;如果 ALUop_i 等於 5'b10100（表示 lw 操作），mem_we 設置為 0 啟動read data
+```
+always @ (*) begin
+    if (rst)
+        mem_we <= 1'b0;
+    else begin
+        if (ALUop_i == 5'b10100)  // lw
+            mem_we <= 1'b0;
+        else if (ALUop_i == 5'b10101)  // sw
+            mem_we <= 1'b1;
+        else
+            mem_we <= 1'b0;
+    end
+end
+
+endmodule
+```
+
+
 
 # RISC-V_CPU_Verilog_Simulation
 
@@ -161,6 +186,7 @@ end
 
 endmodule
 ```
+
 
 ### 3.waveform : 
 
