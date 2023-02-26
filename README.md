@@ -7,6 +7,10 @@ Implementing a simple RISC-V processor in Verilog.
 * Use vivado to view waveform 
 * Run the test codes
 
+
+![未命名绘图 drawio (4)](https://user-images.githubusercontent.com/68816726/221400569-80fbcf49-e0cd-48c4-bf1f-cbc73a70c3fa.png)
+
+
 ## RV32I Base Instruction Set: 
 
 | Instruction  | Funct3 | Funct6/7 | Opcode | 
