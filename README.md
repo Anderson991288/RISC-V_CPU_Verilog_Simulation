@@ -110,8 +110,7 @@ end
 
 * 根據id.v中所得的ALUop和兩個source operands，進行相應的運算
 
-
-![Screenshot 2023-02-26 113154](https://user-images.githubusercontent.com/68816726/221390837-fd3b26e8-d21d-4ff3-af7c-42a6b699a64c.png)
+![未命名绘图 drawio (2)](https://user-images.githubusercontent.com/68816726/221391059-0ae34e6d-3464-479b-a398-baa6ba749af1.png)
 
 
 | ALUop  | Operation |
