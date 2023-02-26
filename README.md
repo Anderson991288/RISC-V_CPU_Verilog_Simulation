@@ -72,8 +72,7 @@ endmodule
 
 ### id.v (single cycle) :
 
-* 將輸入的指令進行解碼，產生相應的控制訊號和輸出數據
-
+* 將前面所得的指令進行decode，根據opcode, funct3, funct7決定ALUop
 
 | Instruction | opcode  | funct3 | funct7  | ALUop  |
 | :---------: | :-----: | :----: | :-----: | :----: |
@@ -83,8 +82,30 @@ endmodule
 |     lw      | 0000011 |  010   |   N/A   | 10100  |
 |     addi    | 0010011 |  000   | N/A     | 01100  |
 
-
-
+```
+always @ (*) begin
+    if (rst)
+        ALUop <= 5'b0;
+    else begin
+        casex (inst_i)
+            32'bxxxxxxxxxxxxxxxxxxxxxxxxx1101111: ALUop <= 5'b10000;  // jal
+            32'bxxxxxxxxxxxxxxxxx000xxxxx1100011: ALUop <= 5'b10001;  // beq
+            32'bxxxxxxxxxxxxxxxxx100xxxxx1100011: ALUop <= 5'b10010;  // blt
+            32'bxxxxxxxxxxxxxxxxx010xxxxx0000011: ALUop <= 5'b10100;  // lw
+            32'bxxxxxxxxxxxxxxxxx010xxxxx0100011: ALUop <= 5'b10101;  // sw
+            32'bxxxxxxxxxxxxxxxxx000xxxxx0010011: ALUop <= 5'b01100;  // addi
+            32'b0000000xxxxxxxxxx000xxxxx0110011: ALUop <= 5'b01101;  // add
+            32'b0100000xxxxxxxxxx000xxxxx0110011: ALUop <= 5'b01110;  // sub
+            32'b0000000xxxxxxxxxx001xxxxx0110011: ALUop <= 5'b01000;  // sll
+            32'b0000000xxxxxxxxxx100xxxxx0110011: ALUop <= 5'b00110;  // xor
+            32'b0000000xxxxxxxxxx101xxxxx0110011: ALUop <= 5'b01001;  // srl
+            32'b0000000xxxxxxxxxx110xxxxx0110011: ALUop <= 5'b00101;  // or
+            32'b0000000xxxxxxxxxx111xxxxx0110011: ALUop <= 5'b00100;  // and
+            default: ALUop <= 5'b0;
+        endcase
+    end
+end
+```
 
 
 # RISC-V_CPU_Verilog_Simulation
