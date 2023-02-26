@@ -2,7 +2,7 @@
 
 Implementing a simple RISC-V processor in Verilog.
 
-## Content:
+## Outline:
 * Design a single-cycle 32-bit RISC-V processor 
 * Use vivado to view waveform 
 * Run the test codes
