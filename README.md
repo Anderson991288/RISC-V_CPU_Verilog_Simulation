@@ -148,6 +148,48 @@ end
 endmodule
 ```
 
+### register.v
+* 第一個 always 在posedge時將 data寫入 regFile。如果rst 為 1，所有的register都被重置為 0。如果 we為 1 且 WriteAddr 不等於 0，則將 WriteData 寫入 regFile[WriteAddr] 中
+* 第二個 always 檢查 ReadAddr1 和 ReadReg1 是否為 0 或 1。如果 rst 為 1，ReadData1 設為 0。如果 ReadReg1 為 1，則將 regFile[ReadAddr1] 的內容輸出到 ReadData1
+* 第三個 always 類似於第二個，檢查的是 ReadAddr2 和 ReadReg2。如果 rst 為 1，ReadData2 設為 0。如果 ReadReg2 為 1，則將 regFile[ReadAddr2] 的內容輸出到 ReadData2
+```
+always @ (posedge clk) begin
+    regFile[5'h0] <= 32'b0;  // Register x0 always equals 0. 
+    if (rst)
+        for (i = 0; i < 32; i = i + 1)
+            regFile[i] <= 32'b0;
+    if (!rst && we && WriteAddr != 5'h0) begin
+        regFile[WriteAddr] <= WriteData;  // Write data to register.
+        $display("x%d = %h", WriteAddr, WriteData);  // Display the change of register.
+    end
+end
+
+always @ (*) begin
+    if (rst || ReadAddr1 == 5'h0)
+        ReadData1 <= 32'b0;
+    else if (ReadReg1) begin
+        ReadData1 <= regFile[ReadAddr1];
+    end else
+        ReadData1 <= 32'b0;
+end
+
+always @ (*) begin
+    if (rst || ReadAddr2 == 5'h0)
+        ReadData2 <= 32'b0;
+    else if (ReadReg2) begin
+        ReadData2 <= regFile[ReadAddr2];
+    end else
+        ReadData2 <= 32'b0;
+end 
+endmodule
+```
+
+
+
+
+
+
+
 
 
 # RISC-V_CPU_Verilog_Simulation
