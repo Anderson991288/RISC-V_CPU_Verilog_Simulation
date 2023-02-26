@@ -26,7 +26,7 @@ Implementing a simple RISC-V processor in Verilog.
 
 ## Explain :
 
-### if.v (single cycle) :
+### if.v :
 
 * Program Counter : 用於控制計數器
 
@@ -70,7 +70,7 @@ endmodule
 ```
 
 
-### id.v (single cycle) :
+### id.v :
 
 * 將前面所得的指令decode，根據opcode, funct3, funct7決定ALUop
 
@@ -106,6 +106,41 @@ always @ (*) begin
     end
 end
 ```
+### ex.v 
+
+* 根據id.v中所得的ALUop和兩個source operands，進行相應的運算
+
+
+![Screenshot 2023-02-26 113154](https://user-images.githubusercontent.com/68816726/221390837-fd3b26e8-d21d-4ff3-af7c-42a6b699a64c.png)
+
+
+| ALUop  | Operation |
+| :----: | :-------: |
+| 01101 |     add    |
+| 01000 |     sll    |
+| 01110 |     sub    |
+| 00100 |     and    |
+| 00101 |     or     |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # RISC-V_CPU_Verilog_Simulation
