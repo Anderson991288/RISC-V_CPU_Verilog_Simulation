@@ -108,7 +108,9 @@ end
 ```
 ### ex.v 
 
-* 根據id.v中所得的ALUop和兩個source operands，進行相應的運算
+* 根據id.v中所得的ALUop和兩個source operand，進行相應的運算
+* 如果ALUop是and，則將兩個source operand 做and；減法可以透過2's complement來運算
+
 
 ![未命名绘图 drawio (2)](https://user-images.githubusercontent.com/68816726/221391059-0ae34e6d-3464-479b-a398-baa6ba749af1.png)
 
@@ -120,25 +122,6 @@ end
 | 01110 |     sub    |
 | 00100 |     and    |
 | 00101 |     or     |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
