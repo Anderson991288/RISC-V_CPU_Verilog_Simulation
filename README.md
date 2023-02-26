@@ -24,6 +24,8 @@ Implementing a simple RISC-V processor in Verilog.
 |    sll    |  001    | 0000000  | 0110011 |
 |    srl    | 101     | 0000000  | 0110011 | 
 
+## Explain :
+
 ### if.v (single cycle) :
 
 * Program Counter : 用於控制計數器
