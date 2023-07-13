@@ -227,7 +227,7 @@ endmodule
 
 ### 2.Put the converted machine code under the same path as the vivado project.Read the machine code by inst_mem 
 
-![Screenshot 2023-02-06 215445](https://user-images.githubusercontent.com/68816726/216989718-2b792495-fcc6-43a2-8de6-9b42676c33a4.png)
+![216989718-2b792495-fcc6-43a2-8de6-9b42676c33a4](https://github.com/Anderson991288/RISC-V_CPU_Verilog_Simulation/assets/68816726/81092188-aa10-45a2-bfc8-d894afa93567)
 
 ### inst_mem.v
 
